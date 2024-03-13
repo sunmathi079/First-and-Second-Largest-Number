@@ -1,0 +1,27 @@
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+	    Scanner Sc=new Scanner(System.in);
+	    System.out.println("Enter the number: ");
+	    int n=Sc.nextInt();
+	    System.out.println("Enter the value of Array: ");
+	    int a[]=new int[n];
+	    int l1=0;
+	    int l2=0;
+	    for(int i=0;i<n;i++){
+	        a[i]=Sc.nextInt();
+	    }
+	    for(int i=0;i<n;i++){
+	        if(a[i]>l1){
+	            l2=l1;
+	            l1=a[i];
+	        }
+	        else if(a[i]>l2&&a[i]<l1){
+	            l2=a[i];
+	        }
+	    }
+	    System.out.println("1st largest num: "+l1);
+	    System.out.println("2nd largest num: "+l2);
+	}
+}
